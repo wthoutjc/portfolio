@@ -1,0 +1,54 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Toggle } from ".";
+
+const Navbar = () => {
+  return (
+    <ul className="flex max-w-full p-5 justify-center bg-slate-100 drop-shadow-sm h-[60px] relative dark:bg-gray-900 dark:text-slate-100">
+      <div className="flex max-w-7xl w-full">
+        <section className="w-1/2">
+          <li className="dark:flex w-24 opacity-80 hover:opacity-100 ease-out duration-300 hidden">
+            <Link href="/">
+              <Image
+                className="object-cover"
+                src="https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/nrmlj5wmeop1rcqp5hdp"
+                alt="ionjc"
+                width={100}
+                height={100}
+              />
+            </Link>
+          </li>
+          <li className="flex w-24 opacity-80 hover:opacity-100 ease-out duration-300 dark:hidden">
+            <Link href="/">
+              <Image
+                className="object-cover"
+                src="https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/wonlwuluroldfu03zcml"
+                alt="ionjc"
+                width={100}
+                height={100}
+              />
+            </Link>
+          </li>
+        </section>
+        <section className="hidden w-1/2 justify-evenly md:flex items-center">
+          <li className="hover:underline">
+            <Link href="education">Education</Link>
+          </li>
+          <li className="hover:underline">
+            <Link href="skills">Skills</Link>
+          </li>
+          <li>
+            <Toggle />
+          </li>
+        </section>
+        <section className="flex lex w-1/2 justify-end md:hidden">
+          <button>
+            <p className="text-xs md:text-base">Button</p>
+          </button>
+        </section>
+      </div>
+    </ul>
+  );
+};
+
+export { Navbar };
