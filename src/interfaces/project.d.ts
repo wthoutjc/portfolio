@@ -9,4 +9,5 @@ export interface Project {
   githubLink: string[];
   companyName: string;
   country: string;
+  images: string[];
 }

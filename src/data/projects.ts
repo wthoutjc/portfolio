@@ -21,6 +21,16 @@ export const projects: Project[] = [
     githubLink: [],
     companyName: "PRODUGAN S.A.S.",
     country: "Colombia",
+    images: [
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/produgan-project/gywrdifovkjnd0qhyldw",
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/produgan-project/ndhzj4zxujydgg5i3vjx",
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/produgan-project/mpogqr7ntsggizdhhv2f",
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/produgan-project/o8kewe4klyvtdxfezzbe",
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/produgan-project/ygaxmbsekkomtoqf4whi",
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/produgan-project/altni9p6qfauyztcmqj5",
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/produgan-project/f07bnaropncliqi4pgxg",
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/produgan-project/h1om38r0aodvi0tmtgz4",
+    ],
   },
   {
     id: "2",
@@ -43,5 +53,15 @@ export const projects: Project[] = [
     githubLink: [],
     companyName: "Vita Consulting Salud Y Seguridad En El Trabajo S.A.S.",
     country: "Colombia",
+    images: [
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/produgan-project/gywrdifovkjnd0qhyldw",
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/produgan-project/ndhzj4zxujydgg5i3vjx",
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/produgan-project/mpogqr7ntsggizdhhv2f",
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/produgan-project/o8kewe4klyvtdxfezzbe",
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/produgan-project/ygaxmbsekkomtoqf4whi",
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/produgan-project/altni9p6qfauyztcmqj5",
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/produgan-project/f07bnaropncliqi4pgxg",
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/produgan-project/h1om38r0aodvi0tmtgz4",
+    ],
   },
 ];

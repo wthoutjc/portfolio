@@ -8,9 +8,12 @@ import { Footer, MeCard, Navbar } from "@/components";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "IONJC",
+  title: "IONJC - Home",
   description: "Personal website of Ion J. C.",
   keywords: ["Ion J. C.", "Juan Camilo Ramírez Rátiva", "IONJC"],
+  icons: {
+    icon: "/favicon.ico",
+  }
 };
 
 interface Props {

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Project } from "@/interfaces";
 
 const ProjectCard = (project: Project) => {
-  const { description, id, technologies, title } = project;
+  const { description, id, technologies, title, images } = project;
 
   return (
     <div className="flex flex-col max-w-1xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-6">
@@ -66,17 +66,24 @@ const ProjectCard = (project: Project) => {
             </Link>
           </div>
         </div>
-        <div className="w-1/6">
-          <Image
-            className="w-full h-full object-cover"
-            src="https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/mbxscisbe6yacaa7lkky"
-            style={{
-              viewTransitionName: `image-project-${id}`,
-            }}
-            alt="ionjc dev"
-            width={200}
-            height={200}
-          />
+        <div className="w-1/6 relative">
+          {images.map((image, i) => (
+            <Image
+              key={i}
+              className={`absolute top-${
+                i * 10 + (i % 96)
+              } left-0 rounded-lg rounded-ss-none rounded-se-none rounded-es-none z-${
+                i + 1
+              }`}
+              src={image}
+              style={{
+                viewTransitionName: `image-project-${id}`,
+              }}
+              alt="ionjc dev"
+              width={1600}
+              height={1000}
+            />
+          ))}
         </div>
       </div>
     </div>

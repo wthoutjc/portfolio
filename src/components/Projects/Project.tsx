@@ -1,8 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 
 // Interfaces
 import { Project } from "@/interfaces";
+
+// Components
+import { Carousel } from "@/components";
 
 const Project = (project: Project) => {
   const {
@@ -16,6 +18,7 @@ const Project = (project: Project) => {
     startDate,
     endDate,
     githubLink,
+    images,
   } = project;
 
   return (
@@ -27,7 +30,7 @@ const Project = (project: Project) => {
         }}
         id="title-project"
       >
-        {title}
+        {title} a
       </p>
       <div
         className="mb-1"
@@ -36,7 +39,10 @@ const Project = (project: Project) => {
         }}
       >
         {technologies.map((tech, i) => (
-          <span key={i} className="text-[10px] md:text-xs text-slate-600 mr-2">
+          <span
+            key={i}
+            className="text-[10px] md:text-xs text-slate-600 dark:text-slate-300 mr-2"
+          >
             {tech}
           </span>
         ))}
@@ -44,16 +50,7 @@ const Project = (project: Project) => {
       <hr className="w-full h-0.5 mx-auto dark:bg-gray-100 border-0 rounded md:my-3 bg-[#2f7d95] mb-2" />
       <p className="text-xs md:text-base mb-3">{description}</p>
       <div className="flex w-full mb-6">
-        <Image
-          className="object-cover h-96 w-full"
-          src="https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/mbxscisbe6yacaa7lkky"
-          style={{
-            viewTransitionName: `image-project-${id}`,
-          }}
-          alt="ionjc dev"
-          width={500}
-          height={500}
-        />
+        <Carousel images={images} />
       </div>
       <p className="text-xs md:text-base">{extendedDescription}</p>
       <p className="text-xs md:text-base mt-3 mb-3">
