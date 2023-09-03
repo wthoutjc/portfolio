@@ -1,5 +1,4 @@
-// Services
-import { getProject } from "@/services";
+import projects from "@/data/projects.json";
 
 // Components
 import { Project } from "@/components";
@@ -9,7 +8,7 @@ interface Props {
 }
 
 export default async function ProjectPage({ params }: Props) {
-  const { project } = await getProject(params.id);
+  const project = projects.find((project) => project.id === params.id);
 
   if (!project) throw new Error("Project not found");
   return <Project {...project} />;
