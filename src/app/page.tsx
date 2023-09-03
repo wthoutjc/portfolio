@@ -7,6 +7,10 @@ import { getProjects } from "@/services";
 export default async function Home() {
   const { projects } = await getProjects();
 
-  if (!projects || projects.length === 0) return <h1>No projects found</h1>;
+
+  console.log("[DEBUG]: projects");
+  console.log(projects);
+  
+
   return <ProjectsList projects={projects} />;
 }
