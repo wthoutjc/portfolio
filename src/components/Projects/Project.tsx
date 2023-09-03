@@ -30,7 +30,7 @@ const Project = (project: Project) => {
         }}
         id="title-project"
       >
-        {title} a
+        {title}
       </p>
       <div
         className="mb-1"
