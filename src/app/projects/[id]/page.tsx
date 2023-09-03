@@ -10,7 +10,7 @@ interface Props {
 
 export default async function ProjectPage({ params }: Props) {
   const { project } = await getProject(params.id);
-  if (!project) return <div className="p-3">Project not found</div>;
 
+  if (!project) throw new Error("Project not found");
   return <Project {...project} />;
 }
