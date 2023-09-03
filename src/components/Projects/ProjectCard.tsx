@@ -7,6 +7,9 @@ import { Project } from "@/interfaces";
 const ProjectCard = (project: Project) => {
   const { description, id, technologies, title, images } = project;
 
+  console.log("[DEBUG]: project");
+  console.log(project);
+
   return (
     <div className="flex flex-col max-w-1xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-6">
       <div className="flex">
@@ -29,7 +32,7 @@ const ProjectCard = (project: Project) => {
                 viewTransitionName: `span-project-${id}`,
               }}
             >
-              {technologies.map((tech, i) => (
+              {technologies?.map((tech, i) => (
                 <span
                   key={i}
                   className="text-[10px] md:text-xs text-slate-500 mr-2"
@@ -67,7 +70,7 @@ const ProjectCard = (project: Project) => {
           </div>
         </div>
         <div className="w-1/6 relative">
-          {images.map((image, i) => (
+          {images?.map((image, i) => (
             <Image
               key={i}
               className={`absolute top-${
