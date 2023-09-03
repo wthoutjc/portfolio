@@ -12,7 +12,7 @@ const ProjectsList = ({ projects }: Props) => {
   return (
     <>
       <p className="md:text-xl font-bold mb-2 mt-4 text-zinc-600 dark:text-slate-300">
-        Featured projects
+        Experience
       </p>
       {projects.map((project) => (
         <ProjectCard key={project.id} {...project} />
