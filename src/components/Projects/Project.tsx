@@ -50,7 +50,7 @@ const Project = (project: Project) => {
       <hr className="w-full h-0.5 mx-auto dark:bg-gray-100 border-0 rounded md:my-3 bg-[#2f7d95] mb-2" />
       <p className="text-xs md:text-base mb-3">{description}</p>
       <div className="flex w-full mb-6">
-        {/* <Carousel images={images} /> */}
+        <Carousel images={images} />
       </div>
       <p className="text-xs md:text-base">{extendedDescription}</p>
       <p className="text-xs md:text-base mt-3 mb-3">

@@ -1,54 +1,44 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import { Carousel as FlowbiteCarousel, CarouselInterface } from "flowbite";
-
-// Components
-import { CarouselOptions } from "@/components";
 
 interface Props {
   images: string[];
 }
 
 const Carousel = ({ images }: Props) => {
-  const [carousel, setCarousel] = useState<FlowbiteCarousel | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const prevOnClick = () => {
-    carousel?.prev();
+  const handleSlideChange = (index: number) => {
+    setCurrentSlide(index);
   };
 
-  const nextOnClick = () => {
-    carousel?.next();
+  const handleNextSlide = () => {
+    if (currentSlide === images.length - 1) setCurrentSlide(0);
+    else setCurrentSlide(currentSlide + 1);
   };
 
-  const slideTo = (index: number) => {
-    carousel?.slideTo(index);
+  const handlePrevSlide = () => {
+    if (currentSlide === 0) setCurrentSlide(images.length - 1);
+    else setCurrentSlide(currentSlide - 1);
   };
-
-  useEffect(() => {
-    const { items, options } = CarouselOptions(images);
-    const carousel: CarouselInterface = new FlowbiteCarousel(items, options);
-    setCarousel(carousel);
-  }, [images]);
-
-  useEffect(() => {
-    carousel?.cycle();
-  }, [carousel]);
 
   return (
     <div className="relative w-full">
       <div className="relative h-36 overflow-hidden rounded-lg sm:h-46 xl:h-96 2xl:h-96">
-        {images.map((image, i) => (
-          <div key={i} id={`carousel-item-${i + 1}`} className="w-full">
-            <Image
-              src={image}
-              className="block w-full object-cover"
-              alt="IONJC"
-              width={1400}
-              height={1000}
-            />
-          </div>
-        ))}
+        <div
+          key={currentSlide}
+          id={`carousel-item-${currentSlide + 1}`}
+          className="w-full"
+        >
+          <Image
+            src={images[currentSlide]}
+            className="block w-full object-cover"
+            alt="IONJC"
+            width={1400}
+            height={1000}
+          />
+        </div>
       </div>
       {/* <!-- Slider indicators --> */}
       <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
@@ -56,10 +46,14 @@ const Carousel = ({ images }: Props) => {
           <button
             key={i}
             type="button"
-            className="w-3 h-3 rounded-full bg-white dark:bg-gray-800/30"
+            className={`w-2 h-2 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white dark:focus:ring-gray-900 ${
+              i === currentSlide
+                ? "bg-white dark:bg-zinc-50"
+                : "bg-white/50 dark:bg-gray-600/60"
+            }`}
             aria-current="true"
             aria-label={`Slide ${i + 1}`}
-            onClick={() => slideTo(i)}
+            onClick={() => handleSlideChange(i)}
           />
         ))}
       </div>
@@ -67,11 +61,11 @@ const Carousel = ({ images }: Props) => {
       <button
         type="button"
         className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        onClick={prevOnClick}
+        onClick={handlePrevSlide}
       >
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-200/30 group-hover:bg-white/50 dark:group-hover:bg-gray-50/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-100/70 group-focus:outline-none">
           <svg
-            className="w-4 h-4 text-white dark:text-gray-800"
+            className="w-4 h-4 text-white dark:text-slate-300"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -91,11 +85,11 @@ const Carousel = ({ images }: Props) => {
       <button
         type="button"
         className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        onClick={nextOnClick}
+        onClick={handleNextSlide}
       >
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-200/30 group-hover:bg-white/50 dark:group-hover:bg-gray-50/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-100/70 group-focus:outline-none">
           <svg
-            className="w-4 h-4 text-white dark:text-gray-800"
+            className="w-4 h-4 text-white dark:text-slate-300"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
