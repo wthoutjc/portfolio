@@ -3,4 +3,4 @@ export * from "./MeCard";
 export * from "./Projects";
 
 // client components
-export { Carousel, CarouselOptions } from "./ui";
+export { Carousel } from "./ui";
