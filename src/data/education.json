@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "schoolName": "Universidad Distrital Francisco José de Caldas",
+    "degree": "Ingeniería de Sistemas",
+    "fieldOfStudy": "Pregrado",
+    "startYear": 2018,
+    "endYear": 2023,
+    "description": "Estudiante de Ingeniería de Sistemas en la Universidad Distrital Francisco José de Caldas, actualmente cursando último semestre.",
+    "images": [
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/education/eqbdppn7iqdztstzea95"
+    ]
+  },
+  {
+    "id": 2,
+    "schoolName": "(DS4A) Data Science for All (Colombia) - Correlation One",
+    "degree": "Data Science",
+    "fieldOfStudy": "Diplomado",
+    "startYear": 2021,
+    "endYear": 2021,
+    "description": "Diplomado en Data Science, con énfasis en Machine Learning, Deep Learning y Big Data.",
+    "images": [
+      "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/education/ev9vcslyjlpmvzqlbuia"
+    ]
+  }
+]
