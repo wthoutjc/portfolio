@@ -4,4 +4,5 @@ export * from "./Projects";
 export * from "./Education";
 
 // client components
+export * from "./Redux";
 export { Carousel } from "./ui";

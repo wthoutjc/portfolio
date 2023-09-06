@@ -5,6 +5,9 @@ import "../styles/globals.css";
 // Components
 import { Footer, MeCard, Navbar } from "@/components";
 
+// Redux
+import { Providers } from "@/redux";
+
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -13,19 +16,21 @@ export const metadata: Metadata = {
   keywords: ["Ion J. C.", "Juan Camilo Ramírez Rátiva", "IONJC"],
   icons: {
     icon: "/favicon.ico",
-  }
+  },
 };
 
 interface Props {
   children: React.ReactNode;
+  sideClient: React.ReactNode;
 }
 
-export default function RootLayout({ children }: Props) {
+export default function RootLayout({ children, sideClient }: Props) {
   return (
     <html lang="es">
       <body
         className={`${montserrat.className} flex flex-col max-w-full min-h-screen bg-slate-100 dark:bg-gray-900 dark:text-slate-100`}
       >
+        <Providers>{sideClient}</Providers>
         <Navbar />
         <div className="flex flex-[1_0_auto] justify-center">
           <div
