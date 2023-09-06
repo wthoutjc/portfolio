@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Toggle } from ".";
+import { MobileNavbar, Toggle } from "..";
 
 const Navbar = () => {
   return (
@@ -32,19 +32,17 @@ const Navbar = () => {
         </section>
         <section className="hidden w-1/2 justify-evenly md:flex items-center">
           <li className="hover:underline">
-            <Link href="education">Education</Link>
+            <Link href="/education">Education</Link>
           </li>
           <li className="hover:underline">
-            <Link href="skills">Skills</Link>
+            <Link href="/skills">Skills</Link>
           </li>
           <li>
             <Toggle />
           </li>
         </section>
         <section className="flex lex w-1/2 justify-end md:hidden">
-          <button>
-            <p className="text-xs md:text-base">Button</p>
-          </button>
+          <MobileNavbar />
         </section>
       </div>
     </ul>
