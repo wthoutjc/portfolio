@@ -32,10 +32,10 @@ const Navbar = () => {
         </section>
         <section className="hidden w-1/2 justify-evenly md:flex items-center">
           <li className="hover:underline">
-            <Link href="/education">Education</Link>
+            <Link href={"/education"}>Education</Link>
           </li>
           <li className="hover:underline">
-            <Link href="/skills">Skills</Link>
+            <Link href={"/skills"}>Skills</Link>
           </li>
           <li>
             <Toggle />

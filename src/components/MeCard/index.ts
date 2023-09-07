@@ -1,1 +1,2 @@
-export * from "./MeCard"
+export * from "./MeCard";
+export * from "./ImageCard";

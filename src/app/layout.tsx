@@ -3,10 +3,7 @@ import { Montserrat } from "next/font/google";
 import "../styles/globals.css";
 
 // Components
-import { Footer, MeCard, Navbar } from "@/components";
-
-// Redux
-import { Providers } from "@/redux";
+import { Footer, MeCard, Modal, Navbar } from "@/components";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -30,7 +27,7 @@ export default function RootLayout({ children, sideClient }: Props) {
       <body
         className={`${montserrat.className} flex flex-col max-w-full min-h-screen bg-slate-100 dark:bg-gray-900 dark:text-slate-100`}
       >
-        {/* <Providers>{sideClient}</Providers> */}
+        <Modal />
         <Navbar />
         <div className="flex flex-[1_0_auto] justify-center">
           <div
