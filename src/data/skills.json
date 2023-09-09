@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Python",
+    "description": "I have significant experience with Python, which I've leveraged extensively throughout my career as a Fullstack Developer. Python is a language that I'm well-versed in, and I've utilized it to develop robust and efficient backends for various projects.\nOne notable example is my work at PRODUGAN S.A.S., where I led the development of a web automation services application. In this role, Python was my language of choice for crafting the backend of the application. I adopted object-oriented programming (OOP) principles to structure the code, and I also created a REST API using Python to facilitate seamless communication between different parts of the system. This allowed us to automate complex processes, manage orders effectively, and ensure a smooth user experience.\n\n    My experience with Python extends beyond this project. I've applied it in various contexts, harnessing its versatility and extensive library support to tackle diverse challenges in software development. Whether it's building APIs, handling data processing tasks, or integrating with other technologies, Python has consistently been a valuable tool in my toolkit.",
+    "frameworks": ["Django", "Flask", "Pandas & Numpy"],
+    "image": "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/skills/xkyykvf8oq0phaiezfcv"
+  },
+  {
+    "id": "2",
+    "name": "Typescript",
+    "description": "I possess strong proficiency in TypeScript, which has been a fundamental part of my journey as a Fullstack Developer. TypeScript's statically typed nature and its ability to compile to JavaScript have proven to be invaluable in creating robust and maintainable applications.\nAt PRODUGAN S.A.S., during the development of a web automation services application, TypeScript played a pivotal role in enhancing the frontend of the project. Specifically, I leveraged TypeScript's static typing and advanced tooling to ensure code reliability and maintainability. This was particularly important in a project that demanded a high level of accuracy and efficiency in managing the company's orders.\nIn addition to this project, TypeScript has been a core part of my skill set for various other endeavors. Its ability to catch type-related errors during development, coupled with its compatibility with popular frontend frameworks like React, has enabled me to build responsive and interactive user interfaces. I have utilized TypeScript's features, such as interfaces and advanced type checking, to create clean and well-documented codebases.\nFurthermore, TypeScript aligns seamlessly with the JavaScript ecosystem, making it a powerful choice for modern web development. My experience extends to harnessing TypeScript within various contexts, including state management with tools like Redux, asynchronous operations with Promises, and even WebSocket communication for real-time applications.",
+    "frameworks": ["Node.js", "React", "Next.js"],
+    "image": "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/skills/bxjsbf1zjoy87sp6obex"
+  },
+  {
+    "id": "3",
+    "name": "AWS",
+    "description": "My experience with AWS extends beyond this project, as I have consistently integrated AWS services into my Fullstack development work. Whether it's optimizing cost structures through serverless computing, ensuring data security and compliance, or scaling applications to meet increased demand, AWS has been my go-to platform.",
+    "frameworks": ["Lambda", "S3", "EC2", "IAM", "Serverless", "EBS"],
+    "image": "https://res.cloudinary.com/ddmeptk5c/image/upload/f_auto,q_auto/v1/portfolio/skills/jyybntvstbfqfk9renop"
+  }
+]
